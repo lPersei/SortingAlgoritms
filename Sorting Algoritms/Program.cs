@@ -8,19 +8,12 @@ namespace Sorting_Algoritms
         static void Main(string[] args)
         {
             Randomizer randomizer = new Randomizer();
-            List<int> Arr = new List<int> { 9, 4, 2, 1, 7, 5, 34, 3 };
-            BubbleSort bubbleSort = new BubbleSort();
-            bubbleSort.sort();
-            foreach(int item in bubbleSort.SortedItemsList)
-            {
-                Console.Write(item.ToString() + " ");
-            }
-            Console.WriteLine(Environment.NewLine);
 
-            sorter.SortedItemsList = randomizer.FillWithValues(100, 0, 200);
-            bubbleSort = new BubbleSort<int>(sorter.SortedItemsList);
-            bubbleSort.sort();
-            foreach (int item in sorter.SortedItemsList)
+            Sorter.SortedItemsList = randomizer.FillWithValues(100, 0, 200);
+
+            InsertionSort insertionSort = new InsertionSort();
+            insertionSort.sort();
+            foreach (int item in Sorter.SortedItemsList)
             {
                 Console.Write(item.ToString() + " ");
             }

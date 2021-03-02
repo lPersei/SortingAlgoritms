@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Sorting_Algoritms
 {
+    /// <summary>
+    /// Implementation of the bubble-sorting algorithm
+    /// </summary>
     public class BubbleSort : Sorter
     {
         public void sort()
