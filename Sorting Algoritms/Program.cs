@@ -11,8 +11,14 @@ namespace Sorting_Algoritms
 
             Sorter.SortedItemsList = randomizer.FillWithValues(100, 0, 200);
 
-            InsertionSort insertionSort = new InsertionSort();
-            insertionSort.sort();
+            MergeSort mergeSort = new MergeSort();
+            mergeSort.sort();
+
+            PrintList();
+        }
+
+        public static void PrintList()
+        {
             foreach (int item in Sorter.SortedItemsList)
             {
                 Console.Write(item.ToString() + " ");
