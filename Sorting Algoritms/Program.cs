@@ -11,8 +11,8 @@ namespace Sorting_Algoritms
 
             Sorter.SortedItemsList = randomizer.FillWithValues(100, 0, 200);
 
-            MergeSort mergeSort = new MergeSort();
-            mergeSort.sort();
+            SelectionSort selectionSort = new SelectionSort();
+            selectionSort.sort();
 
             PrintList();
         }
@@ -22,7 +22,7 @@ namespace Sorting_Algoritms
             foreach (int item in Sorter.SortedItemsList)
             {
                 Console.Write(item.ToString() + " ");
-            }
+            }           
         }
     }
 }
