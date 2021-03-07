@@ -9,10 +9,10 @@ namespace Sorting_Algoritms
         {
             Randomizer randomizer = new Randomizer();
 
-            Sorter.SortedItemsList = randomizer.FillWithValues(100, 0, 200);
+            Sorter.SortedItemsList = randomizer.FillWithValues(50, 0, 200);
 
-            SelectionSort selectionSort = new SelectionSort();
-            selectionSort.sort();
+            QuickSort Sort = new QuickSort();
+            Sort.sort();
 
             PrintList();
         }

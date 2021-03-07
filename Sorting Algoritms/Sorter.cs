@@ -10,11 +10,11 @@ namespace Sorting_Algoritms
     public class Sorter
     {
         public static List<int> SortedItemsList = new List<int>();
-        public void Swap(int ItemA, int ItemB)
+        public void Swap(int IndexA, int IndexB)
         {
-            var tmp = SortedItemsList[ItemA];
-            SortedItemsList[ItemA] = SortedItemsList[ItemB];
-            SortedItemsList[ItemB] = tmp;
+            var tmp = SortedItemsList[IndexA];
+            SortedItemsList[IndexA] = SortedItemsList[IndexB];
+            SortedItemsList[IndexB] = tmp;
         }
     }
 }
