@@ -22,8 +22,12 @@ namespace Sorting_Algoritms
             {
                 indexList[i + 1] = indexList[i] + indexList[i + 1];
             }
-
-            List<int> final = SortedItemsList;//new List<int>();
+            //Array for sorted values
+            List<int> final = new List<int>();
+            foreach(int x in SortedItemsList)
+            {
+                final.Add(x);
+            }
             
             for (int i = Size-1; i >= 0; --i)
             {
