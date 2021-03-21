@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,21 +8,22 @@ namespace Sorting_Algoritms
     /// <summary>
     /// Implementation of the insertion-sorting algorithm
     /// </summary>
-    class InsertionSort : Sorter
+    class InsertionSort
     {
-        public void sort()
+        public IList<T> GetSortedArray<T>(IList<T> ArraySorted) where T : IComparable
         {
-            int Size = SortedItemsList.Count;
+            int Size = ArraySorted.Count;
             for (int i = 0; i < Size-1; ++i)
             {
                 for (int j = i+1; j > 0; --j)
                 {
-                    if (SortedItemsList[j-1] > SortedItemsList[j])
+                    if (ArraySorted[j-1].CompareTo(ArraySorted[j]) > 0)
                     {
-                        Swap(j-1, j);
+                        ArraySorted.Swap(j-1, j);
                     }
                 }
             }
+            return ArraySorted;
         }
     }
 }

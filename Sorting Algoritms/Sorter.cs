@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,14 +8,13 @@ namespace Sorting_Algoritms
     /// <summary>
     /// Class for swapping elements in array
     /// </summary>
-    public class Sorter
+    public static class Sorter
     {
-        public static List<int> SortedItemsList = new List<int>();
-        public void Swap(int IndexA, int IndexB)
+        public static void Swap<T>(this IList<T> SwappedArray, int IndexA, int IndexB) where T : IComparable
         {
-            var tmp = SortedItemsList[IndexA];
-            SortedItemsList[IndexA] = SortedItemsList[IndexB];
-            SortedItemsList[IndexB] = tmp;
+            var tmp = SwappedArray[IndexA];
+            SwappedArray[IndexA] = SwappedArray[IndexB];
+            SwappedArray[IndexB] = tmp;
         }
     }
 }

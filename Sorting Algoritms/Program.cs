@@ -9,17 +9,20 @@ namespace Sorting_Algoritms
         {
             Randomizer randomizer = new Randomizer();
 
-            Sorter.SortedItemsList = randomizer.FillWithValues(50, 0, 100);
+            //IList<int> ItemList = randomizer.FillWithValues(50, 0, 100);
+            IList<double> ItemList = new List<double> { 2.33, 1.3, 1.01, 1.09, 3.28, 100.92 };
 
-            CountingSort Sort = new CountingSort();
-            Sort.sort();
+            //IList<char> ItemList = new List<char> {'c','a','A','b' };
 
-            PrintList();
+            QuickSort Sort = new QuickSort();
+            ItemList = Sort.GetSortedArray(ItemList);
+
+            PrintList(ItemList);
         }
 
-        public static void PrintList()
+        public static void PrintList<T>(IList<T> ItemList)
         {
-            foreach (int item in Sorter.SortedItemsList)
+            foreach (T item in ItemList)
             {
                 Console.Write(item.ToString() + " ");
             }           

@@ -8,38 +8,37 @@ namespace Sorting_Algoritms
     /// <summary>
     /// Implementation of the SelectionSort
     /// </summary>
-    class SelectionSort : Sorter
+    class SelectionSort
     {
-        public void sort()
+        public IList<T> GetSortedArray<T>(IList<T> ArraySorted) where T : IComparable
         {
-            List<int> UnsortedList = SortedItemsList;
-            List<int> SortedList = new List<int>();
+            IList<T> SortedList = new List<T>();
 
-            int min; //min element in Unsorted array
+            T min; //min element in Unsorted array
             
-            while (UnsortedList.Count != 1) //While list size less than 1
+            while (ArraySorted.Count != 1) //While list size less than 1
             {
-                min = UnsortedList[0]; //Let the min = first element
+                min = ArraySorted[0]; //Let the min = first element
                 int index = 0; //Let the index to remove at Unsorted array = index of the first element
-                for (int i = 1; i < UnsortedList.Count; ++i) //Starting from the second item in array, checks which element is lesser 
+                for (int i = 1; i < ArraySorted.Count; ++i) //Starting from the second item in array, checks which element is lesser 
                 {
-                    if (min < UnsortedList[i])
+                    if (min.CompareTo(ArraySorted[i]) < 0)
                     {
                         continue;
                     }
                     else
                     {
-                        min = UnsortedList[i];
+                        min = ArraySorted[i];
                         index = i; //Index of lesser element`s value
                     }
 
                 }
                 SortedList.Add(min); //Add element to the list
-                UnsortedList.RemoveAt(index); //Remove element from Unsorted array
+                ArraySorted.RemoveAt(index); //Remove element from Unsorted array
             }
-            SortedList.Add(UnsortedList[0]); //Add the last element in the Unsorted array
+            SortedList.Add(ArraySorted[0]); //Add the last element in the Unsorted array
 
-            SortedItemsList = SortedList;
+            return SortedList;
         }
     }
 }
