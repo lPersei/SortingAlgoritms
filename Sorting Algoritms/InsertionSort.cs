@@ -8,7 +8,7 @@ namespace Sorting_Algoritms
     /// <summary>
     /// Implementation of the insertion-sorting algorithm
     /// </summary>
-    class InsertionSort
+    class InsertionSort : ISorter
     {
         public IList<T> GetSortedArray<T>(IList<T> ArraySorted) where T : IComparable
         {

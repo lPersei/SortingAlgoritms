@@ -8,7 +8,7 @@ namespace Sorting_Algoritms
     /// <summary>
     /// Implementation of the QuickSort algorithm
     /// </summary>
-    class QuickSort
+    class QuickSort : ISorter
     {
         public IList<T> GetSortedArray<T>(IList<T> ArraySorted) where T : IComparable
         {

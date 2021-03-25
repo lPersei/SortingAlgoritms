@@ -8,7 +8,7 @@ namespace Sorting_Algoritms
     /// <summary>
     /// Implementation of the SelectionSort
     /// </summary>
-    class SelectionSort
+    class SelectionSort : ISorter
     {
         public IList<T> GetSortedArray<T>(IList<T> ArraySorted) where T : IComparable
         {

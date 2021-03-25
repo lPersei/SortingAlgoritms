@@ -9,7 +9,7 @@ namespace Sorting_Algoritms
     /// <summary>
     /// Implementation of the MergeSort algorithm
     /// </summary>
-    class MergeSort
+    class MergeSort : ISorter
     {
         /// <summary>
         /// Main method
