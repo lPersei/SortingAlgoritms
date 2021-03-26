@@ -9,14 +9,13 @@ namespace Sorting_Algoritms
         {
             Randomizer randomizer = new Randomizer();
 
-            //IList<int> ItemList = randomizer.FillWithValues(50, 0, 100);
-            IList<double> ItemList = new List<double> { 2.33, 1.3, 1.01, 1.09, 3.28, 100.92 };
-
+            IList<int> ItemList = randomizer.FillWithValues(50, 0, 100);
+            //IList<double> ItemList = new List<double> { 2.33, 1.3, 1.01, 1.09, 3.28, 100.92 };
             //IList<char> ItemList = new List<char> {'c','a','A','b' };
 
-            QuickSort Sort = new QuickSort();
+            HeapSort Sort = new HeapSort();
             ItemList = Sort.GetSortedArray(ItemList);
-
+            
             PrintList(ItemList);
         }
 
