@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Sorting_Algoritms
 {
+    /// <summary>
+    /// Class that implements Heap Sorting algorithm
+    /// </summary>
     class HeapSort : ISorter
     {
         public IList<T> GetSortedArray<T>(IList<T> ArraySorted) where T : IComparable

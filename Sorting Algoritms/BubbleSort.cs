@@ -14,7 +14,7 @@ namespace Sorting_Algoritms
         {
             bool swapped = true;
             int Size = ArraySorted.Count;
-
+            //while elements was not swapped
             while (swapped == true)
             {
                 swapped = false;

@@ -15,16 +15,8 @@ namespace Sorting_Algoritms
 
             HeapSort Sort = new HeapSort();
             ItemList = Sort.GetSortedArray(ItemList);
-            
-            PrintList(ItemList);
-        }
 
-        public static void PrintList<T>(IList<T> ItemList)
-        {
-            foreach (T item in ItemList)
-            {
-                Console.Write(item.ToString() + " ");
-            }           
-        }
+            ItemList.PrintList();
+        }       
     }
 }
